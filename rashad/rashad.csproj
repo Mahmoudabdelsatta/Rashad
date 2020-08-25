@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE6B8F29-4C18-48A1-B094-056E4E095118}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>rashad</RootNamespace>
+    <AssemblyName>rashad</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\CategoryHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryHome.Designer.cs">
+      <DependentUpon>CategoryHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\categorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\categorySearch.Designer.cs">
+      <DependentUpon>categorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsertCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsertCategory.Designer.cs">
+      <DependentUpon>InsertCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsertItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InsertItem.Designer.cs">
+      <DependentUpon>InsertItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IteamSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IteamSearch.Designer.cs">
+      <DependentUpon>IteamSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ItemHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemHome.Designer.cs">
+      <DependentUpon>ItemHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOdel\category.cs">
+      <DependentUpon>Rashad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOdel\Item.cs">
+      <DependentUpon>Rashad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOdel\Rashad.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rashad.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOdel\Rashad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rashad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOdel\Rashad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rashad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MOdel\User.cs">
+      <DependentUpon>Rashad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CategoryHome.resx">
+      <DependentUpon>CategoryHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\categorySearch.resx">
+      <DependentUpon>categorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsertCategory.resx">
+      <DependentUpon>InsertCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InsertItem.resx">
+      <DependentUpon>InsertItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IteamSearch.resx">
+      <DependentUpon>IteamSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemHome.resx">
+      <DependentUpon>ItemHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="MOdel\Rashad.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Rashad.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MOdel\Rashad.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Rashad.edmx</DependentUpon>
+      <LastGenOutput>Rashad.Context.cs</LastGenOutput>
+    </None>
+    <None Include="MOdel\Rashad.edmx.diagram">
+      <DependentUpon>Rashad.edmx</DependentUpon>
+    </None>
+    <None Include="MOdel\Rashad.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Rashad.edmx</DependentUpon>
+      <LastGenOutput>Rashad.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\download %281%29.jpg" />
+    <Content Include="image\download %282%29.jpg" />
+    <Content Include="image\download %283%29.jpg" />
+    <Content Include="image\download.jpg" />
+    <Content Include="image\images %281%29.jpg" />
+    <Content Include="image\images.jpg" />
+    <Content Include="image\Log.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
